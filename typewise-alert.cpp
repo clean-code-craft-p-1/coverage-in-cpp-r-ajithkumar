@@ -35,7 +35,7 @@ BreachType classifyTemperatureBreach(CoolingType coolingType, double temperature
         upperLimit = 40;
         break;
 
-    case CoolingType::HI_ACTIVE_COOLING:
+    default:
         lowerLimit = 0;
         upperLimit = 45;
         break;
@@ -87,7 +87,7 @@ int sendToEmail(BreachType breachType)
         status = OK;
         break;
 
-    case BreachType::NORMAL:
+    default:
         status = OK;
         break;
     }
